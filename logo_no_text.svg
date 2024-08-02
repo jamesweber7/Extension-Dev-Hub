@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="100" viewBox="0 0 90 100">
+    <defs>
+        <linearGradient id="primary-gradient" x1="0%" y1="100%" x2="20%" y2="0%">
+            <stop offset="0%" stop-color="#2196F3" stop-opacity="0" />
+            <stop offset="23%" stop-color="#2196F3" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#2196F3" stop-opacity="0.5" />
+            <stop offset="70%" stop-color="#2196F3" stop-opacity="1" />
+            <stop offset="100%" stop-color="#2196F3" stop-opacity="1" />
+        </linearGradient>
+        <linearGradient id="background-gradient" x1="0%" y1="100%" x2="20%" y2="0%">
+            <stop offset="0%" stop-color="black" stop-opacity="0" />
+            <stop offset="23%" stop-color="black" stop-opacity="0"/>
+            <stop offset="50%" stop-color="black" stop-opacity="0.5" />
+            <stop offset="70%" stop-color="black" stop-opacity="1" />
+            <stop offset="100%" stop-color="black" stop-opacity="1" />
+        </linearGradient>
+        <mask id="primary-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="black" />
+            <path d="M5 90 L5 30 L22.5 30 A 14,14 0 1 1 42.5,30 L60 30 L60 50 A 14,14 0 1 1 60,70 L60 90" stroke="white" stroke-width="4" fill="black" stroke-linejoin="round"/>
+        </mask>
+        <mask id="background-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="black" />
+            <path d="M5 90 L5 30 L22.5 30 A 14,14 0 1 1 42.5,30 L60 30 L60 50 A 14,14 0 1 1 60,70 L60 90" stroke="black" stroke-width="4" fill="white" stroke-linejoin="round"/>
+        </mask>
+    </defs>
+
+    <rect x="0" y="0" width="100" height="100" fill="url(#background-gradient)" mask="url(#background-mask)"/>
+    <rect x="0" y="0" width="100" height="100" fill="url(#primary-gradient)" mask="url(#primary-mask)"/>
+</svg>

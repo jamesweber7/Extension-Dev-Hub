@@ -1,0 +1,355 @@
+:root {
+    --primary: rgb(232, 232, 232);
+    --background: rgb(41, 41, 41);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    color: var(--primary);
+    background-color: var(--background);
+    font-family: Helvetica, Verdana, Arial, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    font-size: x-large;
+    border-bottom: 1px solid rgba(122,122,122,0.5);
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    padding: 0 10px;
+}
+
+optionsbar {
+    display: inline-block;
+}
+
+.scripts-container {
+    margin-bottom: 50px;
+}
+
+section.script {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(122,122,122,0.3);
+    margin-bottom: 5px;
+}
+
+section.script * {
+    display: block;
+}
+
+section.script .title-container {
+    align-items: center;
+}
+
+section.script .title {
+    font-size: large;
+    transform: translateX(-4px);
+    display: inline-block;
+}
+
+section.script .active-icon {
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #543636;
+}
+
+section.script .active-icon.active {
+    background-color: #7fe77f;
+}
+
+section.script .site-match {
+    opacity: 0.5;
+    font-size: smaller;
+    padding: 2px 0;
+}
+
+section.script .description {
+    opacity: 0.9;
+    font-size: medium;
+    padding-bottom: 3px;
+}
+
+.buttonrow {
+
+}
+
+.buttonrow button {
+    display: inline-block;
+    font-size: large;
+    border-radius: 5px;
+    color: inherit;
+    cursor: pointer;
+    margin-right: 6px;
+    aspect-ratio: 1 / 1;
+}
+
+section.script .buttonrow {
+
+}
+
+section.script .buttonrow button {
+    background: rgba(123, 123, 123, 0.2);
+    border: 2px solid transparent;
+    padding: 4px;
+}
+
+section.script .buttonrow button:hover {
+    border: 2px solid var(--primary);
+}
+
+.title-container .switch {
+    float: right;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Script Editor View */
+
+textarea,
+pre {
+    -moz-tab-size : 2;
+      -o-tab-size : 2;
+         tab-size : 2;
+}
+
+.editor textarea {
+    background: none;
+    color: inherit;
+    border: none;
+    border-radius: 2px;
+    font-family: inherit;
+    outline: none;
+    display: block;
+    width: -webkit-fill-available;
+    resize: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.editor textarea:hover, .editor textarea:focus {
+    background: rgba(0,0,0,0.2);
+}
+
+.editor .title {
+    font-size: x-large;
+}
+
+.editor .description {
+    opacity: 0.8;
+}
+
+.editor .code {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.editor .buttonrow {
+    margin-bottom: 10px;
+}
+
+.fixed-corner-button {
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 50%;
+    font-size: large;
+    aspect-ratio: 1 / 1;
+}
+
+.toprow button {
+    background: none;
+    padding: none;
+    border: none;
+}
+
+.toprow button:hover {
+    background: rgba(123,123,123,0.2);
+}
+
+.toprow button.back, .toprow button.back:hover {
+    background: none;
+}
+
+.toprow button {
+    float: right;
+}
+
+.toprow button.back {
+    float: none; 
+}
+
+.hidden {
+    display: none !important;
+}
+
+.editor .site-match-container {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.editor .runs-on-container span,
+.editor .runs-on-container button {
+    padding: 0px 4px;
+}
+
+.editor .runs-on-container span {
+    font-size: small;
+    opacity: 0.8;
+}
+
+.editor .runs-on-container button {
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: small;
+
+    border-radius: 2px;
+    border: 2px solid transparent;
+    margin-left: 10px;
+}
+
+.editor .runs-on-container button.selected {
+    border: 2px solid var(--primary);
+}
+
+.editor .runs-on-container button:hover {
+    background: rgba(123,123,123, 0.2);
+}
+
+.some-sites-control-containter { 
+    display: block;
+}
+
+.new-site-input-containter input[type=text],
+.new-site-input-containter button {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.new-site-input-containter input[type=text] {
+    background: rgba(123, 123, 123, 0.3);
+    border: none;
+    display: block;
+    margin-bottom: 4px;
+    width: -webkit-fill-available;
+}
+
+.new-site-input-containter button {
+    background: none;
+    border: 2px solid transparent;
+    display: inline-block;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.new-site-input-containter button:hover {
+    background: rgba(123, 123, 123, 0.2);
+}
+
+.new-site-input-containter button.selected {
+    border: 2px solid var(--primary);
+}
+
+.new-site-input-containter button.add-site {
+    border: none;
+    background: none;
+    float: right;
+    font-size: large;
+    aspect-ratio: 1 / 1;
+}
+
+.match-pattern-button-container {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.existing-match-pattern {
+    opacity: 0.9;
+}
+
+.delete-match-pattern-button {
+    background: none;
+    padding: 0;
+    border: none;
+    color: inherit;
+    margin-left: 4px;
+    font-weight: bolder;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.new-site-input-containter .tip {
+    margin-top: 3px;
+    display: block;
+    font-size: smaller;
+    opacity: 0.8;
+}
+
+.new-site-input-containter .tip a {
+    display: contents;
+    color: inherit;
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="100" viewBox="0 0 90 100">
+    <style>
+        :root {
+            --primary: #2196F3;
+            --background: black;
+        }
+    </style>
+    <path d="M5 90 L5 30 L22.5 30 A 14,14 0 1 1 42.5,30 L60 30 L60 50 A 14,14 0 1 1 60,70 L60 90" stroke="var(--primary)" stroke-width="4" fill="var(--background)" stroke-linejoin="round"/>
+    <text x="10" y="50" font-family="lucida console" font-weight="1000" font-size="18" fill="var(--primary)" >1010</text>
+    <text x="10" y="70" font-family="lucida console" font-weight="1000" font-size="18" fill="var(--primary)">1101</text>
+    <text x="10" y="90" font-family="lucida console" font-weight="1000" font-size="18" fill="var(--primary)">0100</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Extension Dev Hub",
+    "version": "0.0.1",
+    "description": "A hub for users to create chrome extensions.",
+    "permissions": ["activeTab", "storage"],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["data.js", "storage.js", "generic_functions.js", "tab_functions.js", "cross_communication.js", "tab_communication.js", "content.js"]
+        }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; script-src-elem *"
+}
