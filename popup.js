@@ -250,6 +250,7 @@ async function setUIToViewScript(script_id) {
 
     const code = document.createElement('textarea');
     code.className = 'code';
+    code.spellcheck = false;
     code.title = 'Extension Code';
     code.placeholder = 'Write Code Here...';
     code.value = script_data.content;
